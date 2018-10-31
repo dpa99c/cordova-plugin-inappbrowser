@@ -665,7 +665,7 @@ BOOL isExiting = FALSE;
     
     //WKWebView options
     configuration.allowsInlineMediaPlayback = _browserOptions.allowinlinemediaplayback;
-    if (@available(iOS 10.0, *)) {
+    if (IsAtLeastiOSVersion(@"10.0")) {
         configuration.ignoresViewportScaleLimits = _browserOptions.enableviewportscale;
         if(_browserOptions.mediaplaybackrequiresuseraction == YES){
             configuration.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeAll;
